@@ -25,3 +25,6 @@ Answer 1. Well i do simply don't know.
 
 Question 2. What boot loader does it use by default?
 Answer 2. I preinstall the GRUB boot loader.
+
+Question 3. What kernel source does the stage4's use?
+Answer 3. The normal stage4's use the gentoo-sources kernel
