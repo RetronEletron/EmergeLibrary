@@ -28,7 +28,7 @@ else
 echo "Welcome to The EmergeLibrary! This program will guide you through the installation."
 echo "Firstly make sure you have the root partition mounted at /mnt/gentoo and have the stage4 downloaded at /mnt/gentoo either way have an fun journey."
 cd /mnt/gentoo 
-wget https://github.com/RetronEletron/EmergeLibrary/blob/main/stage4-install2.sh
+wget https://raw.githubusercontent.com/RetronEletron/EmergeLibrary/main/stage4-install2.sh
 tar -xJpf /mnt/gentoo/*
 cp --dereference /etc/resolv.conf /mnt/gentoo/etc
 mount --types proc /proc /mnt/gentoo/proc
