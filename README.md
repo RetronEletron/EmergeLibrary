@@ -20,6 +20,10 @@ Than go ahead and download the stage4install.sh script and run it as root and th
 Note:
 This installation guide only includes the additional steps of using the scripts stuff like editing fstab will not be documented.
 
+## How do i create stage4's?
+
+I first mount the root partition at /mnt/gentoo and you go into that directory and run tar -cJpvf /path/to/output/tarball.tar.xz * and to extract you run tar -xJpf /mnt/gentoo/file.tar.xz
+
 ## FAQ (Frequent asked questions)
 
 Question 1. How many stage4's do you plan to add.
