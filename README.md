@@ -17,3 +17,11 @@ Than go ahead and download the stage4install.sh script and run it as root and th
 
 Note:
 This installation guide only includes the additional steps of using the scripts stuff like editing fstab will not be documented.
+
+## FAQ (Frequent asked questions)
+
+Question 1. How many stage4's do you plan to add.
+Answer 1. Well i do simply don't know.
+
+Question 2. What boot loader does it use by default?
+Answer 2. I preinstall the GRUB boot loader.
