@@ -11,9 +11,11 @@ An stage4 can work by simply extracting it and doing a few modifications dependi
 
 Firstly, make sure to mount your root partition to /mnt/gentoo than make sure you had downloaded your stage4 to /mnt/gentoo.
 
+Than run where the script is chmod 755 stage4install.sh
+
 Than edit stage4install.sh and edit the "mount /dev/sdc3 /boot/efi" command by replacing the /dev/sdc3 with your ESP partition.
 
-Than go ahead and download the stage4install.sh script and run it as root and than when it is done run "./install stage4install2.sh" and when it is done please enjoy the stage4's.
+Than go ahead and download the stage4install.sh script and run it as root and than when it is done run chmod 755 stage4install2.sh than "./install stage4install2.sh" and when it is done please enjoy the stage4's.
 
 Note:
 This installation guide only includes the additional steps of using the scripts stuff like editing fstab will not be documented.
