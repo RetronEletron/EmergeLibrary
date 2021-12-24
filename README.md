@@ -34,3 +34,9 @@ Answer 2. I preinstall the GRUB boot loader.
 
 Question 3. What kernel source does the stage4's use?
 Answer 3. The normal stage4's use the gentoo-sources kernel
+
+Question 4. Why do you use testing packages globally?
+Answer 4. I generally use testing packages globally to make troubleshooting easier and to help new users and to increase stability and not have people asking why some packages may be so old.
+
+Question 5. What display server do you include when needed for example for DE?
+Answer 5. I generally include xorg-server and xorg-drivers although the DE may bring wayland as well but those are just the additional packages.
