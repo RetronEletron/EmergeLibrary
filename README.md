@@ -40,3 +40,6 @@ Answer 4. I generally use testing packages globally to make troubleshooting easi
 
 Question 5. What display server do you include when needed for example for DE?
 Answer 5. I generally include xorg-server and xorg-drivers although the DE may bring wayland as well but those are just the additional packages.
+
+Question 6. What did you do for firmware wise of the stage4's?
+Answer 5. Well i include linux-firmware and intel-microcode to fit most users.
