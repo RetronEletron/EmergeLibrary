@@ -15,6 +15,8 @@ Than run where the script is chmod 755 stage4install.sh
 
 Than edit stage4install2.sh when the first script is done and edit the "mount /dev/sdc3 /boot/efi" command by replacing the /dev/sdc3 with your ESP partition.
 
+And make sure to have nothing in /mnt/gentoo except the stage4.
+
 Than go ahead and download the stage4install.sh script and run it as root and than when it is done run chmod 755 stage4install2.sh than "./install stage4install2.sh" and when it is done please enjoy the stage4's.
 
 Note:
