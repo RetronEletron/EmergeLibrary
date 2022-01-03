@@ -48,3 +48,6 @@ Answer 6. Well i include linux-firmware and intel-microcode to fit most users.
 
 Question 7. What is the root password of your stage4's?
 Answer 7. By default it has no password.
+
+Question 8. How do you usually do your stage4's?
+Answer 8. I generally get the gentoo profile related to the DE/WM than i compile the kernel than i do the grub thing than i install XORG when it is needed by an DE or wayland if that uses that and than i install the DM by the DE most chosen DM than i install webkit-gtk and neofetch.
