@@ -15,7 +15,7 @@ if [ $EUID -ne 0 ]; then
 if [ -e /sys/firmware/efi/systab ]; then
   efisys="y"
 else
-  efisys="n"
+  echo "Please boot into UEFI mode for the script to work"
   fi
   # Check if /mnt/gentoo exists.
 if [ -e /mnt ]; then
