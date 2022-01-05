@@ -7,17 +7,44 @@ Hello If you do not know me I am Xinc (on discord) and i would like to provide b
 
 An stage4 can work by simply extracting it and doing a few modifications depending on your case.
 
-## Installation
+## Contact
 
-Firstly, make sure to mount your root partition to /mnt/gentoo than make sure you had downloaded your stage4 to /mnt/gentoo.
+I am generally active on discord so if you need something or just need to tell something go add an friend request at Xinc#0116 and i will try to accept it as quick as possible.
 
-Than run where the script is chmod 755 stage4install.sh
+## Script Installation
 
-Than edit stage4install2.sh when the first script is done and edit the "mount /dev/sdc3 /boot/efi" command by replacing the /dev/sdc3 with your ESP partition.
+# Mounting the root partition
 
-And make sure to have nothing in /mnt/gentoo except the stage4.
+Firstly, make sure to mount your root partition to /mnt/gentoo (Can be the most common file systems like btrfs and ext4)
 
-Than go ahead and download the stage4install.sh script and run it as root and than when it is done run chmod 755 stage4install2.sh than "./install stage4install2.sh" and when it is done please enjoy the stage4's.
+# Running the first install script
+Ok now what we got the root partition mounted you should download the script via github but one important note.
+
+Do not download the script into /mnt/gentoo ever or it will not work download it everywhere else and also check if any files/folders are in /mnt/gentoo where you mounted your root partition if there is delete them if you do not need them if you do move them somewhere and after that make sure you are in UEFI mode.
+
+After you take that note seriously and everything else is ready than you just have to run in the terminal where it is not /mnt/gentoo:
+chmod 755 stage4install.sh
+sudo ./stage4install.sh or ./stage4install.sh if your in root.
+
+# Downloading the stage4
+Firstly go to the releases section
+Than select your stage4 of choice
+Than go the google drive link and download it somewhere.
+Than copy it to /mnt/gentoo.
+
+# Running the second install script
+
+Hello after the first install script is done than you will see an plain terminal and than you can optionally remove the stage4 file by now as it is not needed if everything else went correctly.
+
+Than go ahead and edit the file stage4install2.sh and go to the line of "mount /dev/sdc3 /boot/efi" and edit the "/dev/sdc3" and replace it with the partition name of your ESP partition.
+
+Than go ahead and run those commands:
+chmod 755 stage4install2.sh
+./stage4install2.sh
+
+After that let the script do the job and make sure to follow what files it edits like /etc/fstab.
+
+## Manually installation
 
 Note:
 This installation guide only includes the additional steps of using the scripts stuff like editing fstab will not be documented.
