@@ -28,7 +28,11 @@ else
 echo "Welcome to The EmergeLibrary! This program will guide you through the installation."
 echo "Firstly make sure you have the root partition mounted at /mnt/gentoo and have the stage4 downloaded at /mnt/gentoo either way have an fun journey."
 cd /mnt/gentoo 
-tar -xJpf /mnt/gentoo/*
+unsquashfs *
+cd squashfs-root
+mv * /mnt/gentoo
+cd ..
+rm -rf squashfs-root
 wget https://raw.githubusercontent.com/RetronEletron/EmergeLibrary/main/stage4-install2.sh
 cp --dereference /etc/resolv.conf /mnt/gentoo/etc
 mount --types proc /proc /mnt/gentoo/proc
