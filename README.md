@@ -21,6 +21,7 @@ Than go ahead and download the stage4install.sh script and run it as root and th
 
 Note:
 This installation guide only includes the additional steps of using the scripts stuff like editing fstab will not be documented.
+Another note thee scripts are originally created by TheSonicMaster or more specifically https://github.com/TheSonicMaster/  the script was just modified.
 
 ## How do i create stage4's?
 
