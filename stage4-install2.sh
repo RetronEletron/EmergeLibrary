@@ -9,7 +9,7 @@ else
  echo "Please mount your efi partition to /boot/efi in chroot." >&2
     exit 1
   fi
-  echo "Editing Fstab"
+  echo "Checking if nano is installed"
     which nano &>/dev/null
   if [ $? -eq 0 ]; then
     dltool="nano"
