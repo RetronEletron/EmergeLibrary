@@ -24,7 +24,9 @@ This installation guide only includes the additional steps of using the scripts 
 
 ## How do i create stage4's?
 
-I first mount the root partition at /mnt/gentoo and you go into that directory and run tar -cJpvf /path/to/output/tarball.tar.xz * and to extract you run tar -xJpf /mnt/gentoo/file.tar.xz
+Run everything as root below:
+
+I first mount the root partition at /mnt/gentoo and you go into that directory and run mksquashfs /mnt/gentoo file.sfs -b 131072 -comp xz and to extract you run unsquashfs file.sfs where the file is located.
 
 ## FAQ (Frequent asked questions)
 
