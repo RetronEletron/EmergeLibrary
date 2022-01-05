@@ -11,13 +11,13 @@ An stage4 can work by simply extracting it and doing a few modifications dependi
 
 I am generally active on discord so if you need something or just need to tell something go add an friend request at Xinc#0116 and i will try to accept it as quick as possible.
 
-## Script Installation
+# Script Installation
 
-# Mounting the root partition
+## Mounting the root partition
 
 Firstly, make sure to mount your root partition to /mnt/gentoo (Can be the most common file systems like btrfs and ext4)
 
-# Running the first install script
+## Running the first install script
 Ok now what we got the root partition mounted you should download the script via github but one important note.
 
 Do not download the script into /mnt/gentoo ever or it will not work download it everywhere else and also check if any files/folders are in /mnt/gentoo where you mounted your root partition if there is delete them if you do not need them if you do move them somewhere and after that make sure you are in UEFI mode.
@@ -26,13 +26,13 @@ After you take that note seriously and everything else is ready than you just ha
 chmod 755 stage4install.sh
 sudo ./stage4install.sh or ./stage4install.sh if your in root.
 
-# Downloading the stage4
+## Downloading the stage4
 Firstly go to the releases section
 Than select your stage4 of choice
 Than go the google drive link and download it somewhere.
 Than copy it to /mnt/gentoo.
 
-# Running the second install script
+## Running the second install script
 
 Hello after the first install script is done than you will see an plain terminal and than you can optionally remove the stage4 file by now as it is not needed if everything else went correctly.
 
@@ -44,19 +44,19 @@ chmod 755 stage4install2.sh
 
 After that let the script do the job and make sure to follow what files it edits like /etc/fstab.
 
-## Manually installation
+# Manually installation
 
 Note:
 This installation guide only includes the additional steps of using the scripts stuff like editing fstab will not be documented.
 Another note these scripts are originally created by TheSonicMaster or more specifically https://github.com/TheSonicMaster/  the script was just modified.
 
-## How do i create stage4's?
+# How do i create stage4's?
 
 Run everything as root below:
 
 I first mount the root partition at /mnt/gentoo and you go into that directory and run mksquashfs /mnt/gentoo file.sfs -b 131072 -comp xz and to extract you run unsquashfs file.sfs where the file is located.
 
-## FAQ (Frequent asked questions)
+# FAQ (Frequent asked questions)
 
 Question 1. How many stage4's do you plan to add.
 Answer 1. Well i do simply don't know.
