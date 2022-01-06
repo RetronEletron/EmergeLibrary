@@ -64,17 +64,29 @@ Than copy it to /mnt/gentoo
 ## Unsquashing the stage4
 
 Firstly, make sure your in root.
+
 Than cd into /mnt/gentoo where your stage4 supposed to be.
+
 Than run the "unsquashfs" command and after that put in the full file of the stage4 at /mnt/gentoo so your command should be similar to this command.
+
 "unsquashfs file.sfs" although file.sfs with your file name.
+
 And after that you can OPTIONALLY remove the stage4 although i would do that when i am sure the installation goes fine.
+
 After that we gotta move the extracted contents from the squashfs-root folder to /mnt/gentoo aka the where the root partition is mounted.
+
 And to do just run these commands below.
+
 NOTE: Make sure to be at /mnt/gentoo before you run those commands.
+
 cd squashfs-root
+
 mv * /mnt/gentoo
+
 cd ..
+
 rm -rf squashfs-root
+
 And that should be all for the Unsquashing bit of this guide.
 
 ## Fixing Network Issue with Stage4's
