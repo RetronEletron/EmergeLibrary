@@ -80,8 +80,11 @@ And to do just run these commands below.
 NOTE: Make sure to be at /mnt/gentoo before you run those commands.
 
 cd squashfs-root
+
 mv * /mnt/gentoo
+
 cd ..
+
 rm -rf squashfs-root
 
 And that should be all for the Unsquashing bit of this guide.
@@ -93,24 +96,35 @@ cp --dereference /etc/resolv.conf /mnt/gentoo/etc
 ## Mounting the necessary filesystems
 
 mount --types proc /proc /mnt/gentoo/proc 
+
 mount --rbind /sys /mnt/gentoo/sys 
+
 mount --make-rslave /mnt/gentoo/sys 
+
 mount --rbind /dev /mnt/gentoo/dev 
+
 mount --make-rslave /mnt/gentoo/dev 
+
 mount --bind /run /mnt/gentoo/run 
+
 mount --make-slave /mnt/gentoo/run 
 
 ## Note: only when using non-gentoo media
 
 test -L /dev/shm && rm /dev/shm && mkdir /dev/shm 
+
 mount --types tmpfs --options nosuid,nodev,noexec shm /dev/shm 
+
 chmod 1777 /dev/shm
 
 ## Entering the new environment
 
 chroot /mnt/gentoo /bin/bash
+
 source /etc/profile
+
 export PS1="(chroot) ${PS1}"
+
 
 While in chroot mount your efi partition to /boot/efi
 
@@ -148,6 +162,7 @@ Example of FSTAB:
 #       the blkid(8) command.
 
 UUID=<uuid of efi> /boot/efi vfat umask=0077 0 2
+  
 UUID=<uuid of root>    /    <root partition type>    noatime    0 1
 
 To edit fstab simple do nano /etc/fstab or edit /etc/fstab using your faviourite text editor.
@@ -155,6 +170,7 @@ To edit fstab simple do nano /etc/fstab or edit /etc/fstab using your faviourite
 ## Installing and configuring grub
 
 grub-install
+  
 grub-mkconfig -o /boot/grub/grub.cfg
 
 ## OPTIONALLY Editing /etc/portage/make.conf
