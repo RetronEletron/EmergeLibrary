@@ -29,7 +29,7 @@ sudo ./stage4install.sh or ./stage4install.sh if your in root.
 ## Downloading the stage4
 Firstly go to the releases section
 Than select your stage4 of choice
-Than go the google drive link and download it somewhere.
+Than go the icedrive link and download it somewhere.
 Than copy it to /mnt/gentoo.
 
 ## Running the second install script
