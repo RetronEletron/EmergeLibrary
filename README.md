@@ -80,11 +80,8 @@ And to do just run these commands below.
 NOTE: Make sure to be at /mnt/gentoo before you run those commands.
 
 cd squashfs-root
-
 mv * /mnt/gentoo
-
 cd ..
-
 rm -rf squashfs-root
 
 And that should be all for the Unsquashing bit of this guide.
