@@ -64,31 +64,20 @@ Than copy it to /mnt/gentoo
 ## Unsquashing the stage4
 
 Firstly, make sure your in root.
-
 Than cd into /mnt/gentoo where your stage4 supposed to be.
-
 Than run the "unsquashfs" command and after that put in the full file of the stage4 at /mnt/gentoo so your command should be similar to this command.
-
 "unsquashfs file.sfs" although file.sfs with your file name.
-
 And after that you can OPTIONALLY remove the stage4 although i would do that when i am sure the installation goes fine.
-
 After that we gotta move the extracted contents from the squashfs-root folder to /mnt/gentoo aka the where the root partition is mounted.
-
 And to do just run these commands below.
 
 NOTE: Make sure to be at /mnt/gentoo before you run those commands.
 
 cd squashfs-root
-
 mv * /mnt/gentoo
-
 cd ..
-
 rm -rf squashfs-root
-
 And that should be all for the Unsquashing bit of this guide.
-
 ## Fixing Network Issue with Stage4's
 
 cp --dereference /etc/resolv.conf /mnt/gentoo/etc
@@ -96,33 +85,23 @@ cp --dereference /etc/resolv.conf /mnt/gentoo/etc
 ## Mounting the necessary filesystems
 
 mount --types proc /proc /mnt/gentoo/proc 
-
 mount --rbind /sys /mnt/gentoo/sys 
-
 mount --make-rslave /mnt/gentoo/sys 
-
 mount --rbind /dev /mnt/gentoo/dev 
-
 mount --make-rslave /mnt/gentoo/dev 
-
 mount --bind /run /mnt/gentoo/run 
-
 mount --make-slave /mnt/gentoo/run 
 
 ## Note: only when using non-gentoo media
 
 test -L /dev/shm && rm /dev/shm && mkdir /dev/shm 
-
 mount --types tmpfs --options nosuid,nodev,noexec shm /dev/shm 
-
 chmod 1777 /dev/shm
 
 ## Entering the new environment
 
 chroot /mnt/gentoo /bin/bash
-
 source /etc/profile
-
 export PS1="(chroot) ${PS1}"
 
 
@@ -162,15 +141,13 @@ Example of FSTAB:
 #       the blkid(8) command.
 
 UUID=<uuid of efi> /boot/efi vfat umask=0077 0 2
-  
 UUID=<uuid of root>    /    <root partition type>    noatime    0 1
 
 To edit fstab simple do nano /etc/fstab or edit /etc/fstab using your faviourite text editor.
   
 ## Installing and configuring grub
 
-grub-install
-  
+grub-install  
 grub-mkconfig -o /boot/grub/grub.cfg
 
 ## OPTIONALLY Editing /etc/portage/make.conf
