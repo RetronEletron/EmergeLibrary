@@ -209,6 +209,8 @@ Another thing you can do is edit your hostname and if your on openRC you want to
 
 Another thing you could do optionally is install sudo/doas for your normal user to be able to use root only commands like emerge.
 
+Another thing you should do is edit /etc/portage/make.conf by nano /etc/portage/make.conf or by your faviourite text editor and replace the MAKEOPTS="-j8" or whatever number is in place of 8 than you should change it to the amount of CPU cores you have or want to give to compilations.
+
 # How do i create stage4's?
 
 Run everything as root below:
@@ -243,3 +245,6 @@ Answer 8. I generally get the gentoo profile related to the DE/WM than i compile
 
 Question 9. What is the hostname of your stage4's?
 Answer 9 . The Default hostname is gentoo .
+
+Question 10. Why do you use MAKEOPTS="-j8" or other numbers in /etc/portage/make.conf by default?
+Answer 10. I use it to allow new users to easily set the core number of what they want to give to compilations and to not scare the new users of it spitting random Bad substitution errors at times.
