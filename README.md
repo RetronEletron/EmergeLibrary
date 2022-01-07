@@ -80,6 +80,8 @@ rm -rf squashfs-root
 ```
 And that should be all for the Unsquashing bit of this guide.
 ## Fixing Network Issue with Stage4's
+
+This command below fixes the issue which causes internet to fail during chroot installation and possibly in the install itself.
 ```
 cp --dereference /etc/resolv.conf /mnt/gentoo/etc
 ```
