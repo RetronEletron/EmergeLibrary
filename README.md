@@ -72,18 +72,19 @@ After that we gotta move the extracted contents from the squashfs-root folder to
 And to do just run these commands below.
 
 NOTE: Make sure to be at /mnt/gentoo before you run those commands.
-
+```
 cd squashfs-root
 mv * /mnt/gentoo
 cd ..
 rm -rf squashfs-root
+```
 And that should be all for the Unsquashing bit of this guide.
 ## Fixing Network Issue with Stage4's
-
+```
 cp --dereference /etc/resolv.conf /mnt/gentoo/etc
-
+```
 ## Mounting the necessary filesystems
-
+```
 mount --types proc /proc /mnt/gentoo/proc 
 mount --rbind /sys /mnt/gentoo/sys 
 mount --make-rslave /mnt/gentoo/sys 
@@ -91,25 +92,25 @@ mount --rbind /dev /mnt/gentoo/dev
 mount --make-rslave /mnt/gentoo/dev 
 mount --bind /run /mnt/gentoo/run 
 mount --make-slave /mnt/gentoo/run 
-
+```
 ## Note: only when using non-gentoo media
-
+```
 test -L /dev/shm && rm /dev/shm && mkdir /dev/shm 
 mount --types tmpfs --options nosuid,nodev,noexec shm /dev/shm 
 chmod 1777 /dev/shm
-
+```
 ## Entering the new environment
-
+```
 chroot /mnt/gentoo /bin/bash
 source /etc/profile
 export PS1="(chroot) ${PS1}"
-
+```
 
 While in chroot mount your efi partition to /boot/efi
-
+```
 mount /dev/<efipart> /boot/efi
-
-## OPTIONAL Editing Fstab
+```
+## Editing Fstab
 
 Unless you have the same exact fstab as my stage4's than you should probably edit it.
 
