@@ -93,7 +93,7 @@ mount --make-rslave /mnt/gentoo/dev
 mount --bind /run /mnt/gentoo/run 
 mount --make-slave /mnt/gentoo/run 
 ```
-## Note: only when using non-gentoo media
+# Note: only when using non-gentoo media
 ```
 test -L /dev/shm && rm /dev/shm && mkdir /dev/shm 
 mount --types tmpfs --options nosuid,nodev,noexec shm /dev/shm 
