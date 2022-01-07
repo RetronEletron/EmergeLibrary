@@ -152,7 +152,7 @@ To edit fstab simple do nano /etc/fstab or edit /etc/fstab using your faviourite
 grub-install  
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
-## OPTIONALLY Editing /etc/portage/make.conf
+## Edit /etc/portage/make.conf (Optional)
   
 The /etc/portage/make.conf is not an required step but it may cause problems in some cases in for example different drivers than required which that alone can cause issues and so i recommend editing /etc/portage/make.conf by nano /etc/portage/make.conf or using your own faviourite text editor.
   
