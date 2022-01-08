@@ -26,26 +26,14 @@ After you take that note seriously and everything else is ready than you just ha
 chmod 755 stage4install.sh
 sudo ./stage4install.sh or ./stage4install.sh if your in root.
 
+Note:
+This installation guide only includes the additional steps of using the scripts stuff like editing fstab will not be documented.
+
 ## Downloading the stage4
 Firstly go to the releases section
 Than select your stage4 of choice
 Than go the icedrive link and download it somewhere.
 Than copy it to /mnt/gentoo 
-
-## Running the second install script
-
-Hello after the first install script is done than you will see an plain terminal and than you can optionally remove the stage4 file by now as it is not needed if everything else went correctly.
-
-Than go ahead and edit the file stage4install2.sh and go to the line of "mount /dev/sdc3 /boot/efi" and edit the "/dev/sdc3" and replace it with the partition name of your ESP partition.
-
-Than go ahead and run those commands:
-chmod 755 stage4install2.sh
-./stage4install2.sh
-
-After that let the script do the job and make sure to follow what files it edits like /etc/fstab.
-
-Note:
-This installation guide only includes the additional steps of using the scripts stuff like editing fstab will not be documented.
 
 # Manual installation
 
