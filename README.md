@@ -46,7 +46,6 @@ After that let the script do the job and make sure to follow what files it edits
 
 Note:
 This installation guide only includes the additional steps of using the scripts stuff like editing fstab will not be documented.
-Another note these scripts are originally created by TheSonicMaster or more specifically https://github.com/TheSonicMaster/  the script was just modified.
 
 # Manual installation
 
