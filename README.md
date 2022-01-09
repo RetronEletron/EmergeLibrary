@@ -175,6 +175,17 @@ PKGDIR="/var/cache/binpkgs"
 LC_MESSAGES=C
 GRUB_PLATFORMS="efi-64"
 ```
+## Re-syncing portage
+Simply run the command below
+```
+emerge --sync
+```
+## Changing root password (Optional)
+Run the command below to change the root password.
+```
+passwd
+```
+
 ## What do i do after i finish all those commands?
 
 That may be an question but i generally have some steps for people confused on what to do after the installation.
