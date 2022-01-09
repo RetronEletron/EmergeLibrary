@@ -220,7 +220,9 @@ if that still does not work than edit /etc/conf.d/display-manager and where you 
 
 Systemd:
 Simple run:
-systemctl enable displaymanager and replace displaymanager with the stage4's display manager and than reboot
+systemctl enable displaymanager and replace displaymanager with the stage4's display manager and than reboot.
+
+Still nothing? Than try to see if the display manager mentioned in the stage4 is at all installed if not than install it and reboot.
 ```
 # How do i create stage4's?
 
