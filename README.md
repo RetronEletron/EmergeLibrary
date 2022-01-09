@@ -209,6 +209,19 @@ Another thing you could do optionally is install sudo/doas for your normal user 
 
 Another thing you should do is edit /etc/portage/make.conf by nano /etc/portage/make.conf or by your faviourite text editor and replace the MAKEOPTS="-j8" or whatever number is in place of 8 than you should change it to the amount of CPU cores you have or want to give to compilations.
 
+# Troubleshooting
+Hello an section where you might want to go if you expierence any issues.
+
+Expierencing no display manager after booting up? Than run those commands below.
+```
+OpenRC:
+rc-update add display-manager default
+if that still does not work than edit /etc/conf.d/display-manager and where you see DISPLAYMANAGER="sddm" or anything that is not the stage4's Display manager than you replace that with the stage4's actual display manager (should be said in the release what display manager it has) than reboot
+
+Systemd:
+Simple run:
+systemctl enable displaymanager and replace displaymanager with the stage4's display manager and than reboot
+```
 # How do i create stage4's?
 
 Run everything as root below:
