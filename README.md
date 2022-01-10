@@ -11,31 +11,7 @@ An stage4 can work by simply extracting it and doing a few modifications dependi
 
 I am generally active on discord so if you need something or just need to tell something go add an friend request at Xinc#0116 and i will try to accept it as quick as possible.
 
-# Script Installation
-
-## Mounting the root partition
-
-Firstly, make sure to mount your root partition to /mnt/gentoo (Can be the most common file systems like btrfs and ext4)
-
-## Running the first install script
-Ok now what we got the root partition mounted you should download the script via github but one important note.
-
-Do not download the script into /mnt/gentoo ever or it will not work download it everywhere else and also check if any files/folders are in /mnt/gentoo where you mounted your root partition if there is delete them if you do not need them if you do move them somewhere and after that make sure you are in UEFI mode.
-
-After you take that note seriously and everything else is ready than you just have to run in the terminal where it is not /mnt/gentoo:
-chmod 755 stage4install.sh
-sudo ./stage4install.sh or ./stage4install.sh if your in root.
-
-Note:
-This installation guide only includes the additional steps of using the scripts stuff like editing fstab will not be documented.
-
-## Downloading the stage4
-Firstly go to the releases section
-Than select your stage4 of choice
-Than go the icedrive link and download it somewhere.
-Than copy it to /mnt/gentoo 
-
-# Manual installation
+# Installation
 
 ## Mounting the root partition
 
@@ -185,6 +161,25 @@ Run the command below to change the root password.
 ```
 passwd
 ```
+## Add Display Manager to be ran by default
+Run those commands below if your not sure that the display manager is for sure added to be ran by default.
+```
+OpenRC:
+rc-update add display-manager default
+
+Systemd:
+Simple run:
+systemctl enable displaymanager and replace displaymanager with the stage4's display manager and than reboot.
+
+If those commands still does not let your display manager to run by default than make sure to edit /etc/conf.d/display-manager and where this is below:
+
+CHECKVT=7
+DISPLAYMANAGER="sddm"
+
+Or anything that is not your actual display manager of the stage4 than change it to it.
+
+```
+
 
 ## What do i do after i finish all those commands?
 
@@ -209,21 +204,6 @@ Another thing you could do optionally is install sudo/doas for your normal user 
 
 Another thing you should do is edit /etc/portage/make.conf by nano /etc/portage/make.conf or by your faviourite text editor and replace the MAKEOPTS="-j8" or whatever number is in place of 8 than you should change it to the amount of CPU cores you have or want to give to compilations.
 
-# Troubleshooting
-Hello an section where you might want to go if you expierence any issues.
-
-Expierencing no display manager after booting up? Than run those commands below.
-```
-OpenRC:
-rc-update add display-manager default
-if that still does not work than edit /etc/conf.d/display-manager and where you see DISPLAYMANAGER="sddm" or anything that is not the stage4's Display manager than you replace that with the stage4's actual display manager (should be said in the release what display manager it has) than reboot
-
-Systemd:
-Simple run:
-systemctl enable displaymanager and replace displaymanager with the stage4's display manager and than reboot.
-
-Still nothing? Than try to see if the display manager mentioned in the stage4 is at all installed if not than install it and reboot.
-```
 # How do i create stage4's?
 
 Run everything as root below:
