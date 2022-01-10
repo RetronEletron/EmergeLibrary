@@ -242,3 +242,6 @@ Answer 9 . The Default hostname is gentoo .
 
 Question 10. Why do you use MAKEOPTS="-j8" or other numbers in /etc/portage/make.conf by default?
 Answer 10. I use it to allow new users to easily set the core number of what they want to give to compilations and to not scare the new users of it spitting random Bad substitution errors at times.
+
+Question 11. What file systems does it support by default?
+Answer 11. The packages: dosfstools,e2fsprogs and btrfs-progs are installed by default and any support by those are supported.
