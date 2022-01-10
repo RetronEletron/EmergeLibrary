@@ -169,8 +169,9 @@ rc-update add display-manager default
 
 Systemd:
 Simple run:
-systemctl enable displaymanager and replace displaymanager with the stage4's display manager and than reboot.
+systemctl enable displaymanager and replace displaymanager with the stage4's display manager for example if the display manager is gdm than run systemctl enable gdm and than reboot.
 
+OPENRC ONLY:
 If those commands still does not let your display manager to run by default than make sure to edit /etc/conf.d/display-manager and where this is below:
 
 CHECKVT=7
