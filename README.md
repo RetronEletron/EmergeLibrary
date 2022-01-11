@@ -245,3 +245,6 @@ Answer 10. I use it to allow new users to easily set the core number of what the
 
 Question 11. What file systems does it support by default?
 Answer 11. The packages: dosfstools,e2fsprogs and btrfs-progs are installed by default and any support by those are supported.
+
+Question 12. What tool does the stage4's use by default for networking?
+Answer 12. By default networkmanager
