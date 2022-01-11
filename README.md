@@ -74,6 +74,8 @@ export PS1="(chroot) ${PS1}"
 While in chroot mount your efi partition to /boot/efi
 ```
 mount /dev/<efipart> /boot/efi
+
+NOTE: If it says mount point not found than run the command "mkdir /boot/efi" than run the first command again.
 ```
 ## Editing Fstab
 
