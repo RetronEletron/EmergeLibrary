@@ -1,15 +1,15 @@
 # EmergeLibrary
-An Library of gentoo stage4's proving an bootable system but modified with things like an DE.
+An Library of gentoo stage4's proving a bootable system but modified with things like a DE.
 
 ## Author Introduction
 
-Hello If you do not know me I am Xinc (on discord) and i would like to provide bootable gentoo stage4's to allow people who do not want to bother compiling or want to expierence gentoo without any bother an gentoo stage4 would be probably your best bet!
+Hello If you do not know me I am Xinc (on discord) and i would like to provide bootable gentoo stage4's to allow people who do not want to bother compiling or want to experience gentoo without any bother an gentoo stage4 would be probably your best bet!
 
-An stage4 can work by simply extracting it and doing a few modifications depending on your case.
+A stage4 can work by simply extracting it and doing a few modifications depending on your case.
 
 ## Contact
 
-I am generally active on discord so if you need something or just need to tell something go add an friend request at Xinc#0116 and i will try to accept it as quick as possible.
+I am generally active on discord so if you need something or just need to tell me something go send a friend request at Xinc#0116 and i will try to accept it as quick as possible.
 
 # Installation
 
@@ -20,15 +20,15 @@ Firstly, make sure to mount your root partition to /mnt/gentoo (Can be the most 
 ## Downloading the stage4
 
 Firstly go to the releases section
-Than select your stage4 of choice
-Than go the icedrive link and download it somewhere.
-Than copy it to /mnt/gentoo 
+Then select your stage4 of choice
+Then go the icedrive link and download it somewhere.
+Then copy it to /mnt/gentoo 
 
 ## Unsquashing the stage4
 
-Firstly, make sure your in root.
-Than cd into /mnt/gentoo where your stage4 supposed to be.
-Than run the "unsquashfs" command and after that put in the full file of the stage4 at /mnt/gentoo so your command should be similar to this command.
+Firstly, make sure you are in root.
+Then cd into /mnt/gentoo where your stage4 is supposed to be.
+Then run the "unsquashfs" command and after that put in the full file of the stage4 at /mnt/gentoo so your command should be similar to this command.
 "unsquashfs file.sfs" although file.sfs with your file name.
 And after that you can OPTIONALLY remove the stage4 although i would do that when i am sure the installation goes fine.
 After that we gotta move the extracted contents from the squashfs-root folder to /mnt/gentoo aka the where the root partition is mounted.
@@ -79,7 +79,7 @@ NOTE: If it says mount point not found than run the command "mkdir /boot/efi" th
 ```
 ## Editing Fstab
 
-Unless you have the same exact fstab as my stage4's than you should probably edit it.
+Unless you have the same exact fstab as my stage4's then you should probably edit it.
 
 Example of FSTAB:
 ```
@@ -112,7 +112,7 @@ UUID=<uuid of efi> /boot/efi vfat umask=0077 0 2
 UUID=<uuid of root>    /    <root partition type>    noatime    0 1
 ```
   
-To edit fstab simple do nano /etc/fstab or edit /etc/fstab using your faviourite text editor.
+To edit fstab simply do nano /etc/fstab or edit /etc/fstab using your favourite text editor.
   
 ## Installing and configuring grub
 ```
@@ -121,7 +121,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 ## Edit /etc/portage/make.conf (Optional)
   
-The /etc/portage/make.conf is not an required step but it may cause problems in some cases in for example different drivers than required which that alone can cause issues and so i recommend editing /etc/portage/make.conf by nano /etc/portage/make.conf or using your own faviourite text editor.
+The /etc/portage/make.conf is not a required step but it may cause problems in some cases in for example different drivers then required which that alone can cause issues and so i recommend editing /etc/portage/make.conf by nano /etc/portage/make.conf or using your own faviourite text editor.
   
 Example of /etc/portage/make.conf:
 ```
@@ -154,7 +154,7 @@ LC_MESSAGES=C
 GRUB_PLATFORMS="efi-64"
 ```
 ## Re-syncing portage
-Simply run the command below
+Simply run the command below:
 ```
 emerge --sync
 ```
@@ -164,31 +164,30 @@ Run the command below to change the root password.
 passwd
 ```
 ## Add Display Manager to be ran by default
-Run those commands below if your not sure that the display manager is for sure added to be ran by default.
+Run those commands below if you are not sure that the display manager is for sure added to be ran by default.
 ```
 OpenRC:
 rc-update add display-manager default
 
 Systemd:
-Simple run:
-systemctl enable displaymanager and replace displaymanager with the stage4's display manager for example if the display manager is gdm than run systemctl enable gdm and than reboot.
+systemctl enable displaymanager (replace displaymanager with the stage4's display manager for example if the display manager is gdm than run systemctl enable gdm and then reboot.)
 
 OPENRC ONLY:
-If those commands still does not let your display manager to run by default than make sure to edit /etc/conf.d/display-manager and where this is below:
+If those commands still wont let your display manager to run by default then make sure to edit /etc/conf.d/display-manager and where this is below:
 
 CHECKVT=7
 DISPLAYMANAGER="sddm"
 
-Or anything that is not your actual display manager of the stage4 than change it to it.
+Or anything that is not your actual display manager of the stage4 then change it to it.
 
 ```
 
 
 ## What do i do after i finish all those commands?
 
-That may be an question but i generally have some steps for people confused on what to do after the installation.
+That may be a question but i generally have some steps for people confused on what to do after the installation.
 
-Firstly, I would recommend changing the root password simply type in passwd and than your password if your password is too weak you can edit /etc/security/passwdqc.conf and whatever different is in there change it to this example:
+Firstly, I would recommend changing the root password simply type in passwd and then your password. If your password is too weak you can edit /etc/security/passwdqc.conf and whatever different is in there change it to this example:
 ```
 min=1,1,1,1,1
 max=40
@@ -199,13 +198,13 @@ random=47
 enforce=everyone
 retry=3
 ```
-Another thing you may do is add the user and an easy guide is on https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Finalizing and after adding an user you can set an password for it by doing password username of course replace username with your actual user.
+Another thing you may do is add the user and an easy guide is on https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Finalizing and after adding an user you can set a password for it by doing password username of course replace username with your actual user.
   
-Another thing you can do is edit your hostname and if your on openRC you want to edit /etc/conf.d/hostname and if your on systemd you want to edit /etc/hostname and change the hostname gentoo to whatever hostname you want than save and exit out.
+Another thing you can do is edit your hostname and if you are on openRC you want to edit /etc/conf.d/hostname and if you are on systemd then you would want to edit /etc/hostname and change the hostname gentoo to whatever hostname you want than save and exit out.
 
 Another thing you could do optionally is install sudo/doas for your normal user to be able to use root only commands like emerge.
 
-Another thing you should do is edit /etc/portage/make.conf by nano /etc/portage/make.conf or by your faviourite text editor and replace the MAKEOPTS="-j8" or whatever number is in place of 8 than you should change it to the amount of CPU cores you have or want to give to compilations.
+Another thing you should do is edit /etc/portage/make.conf by nano /etc/portage/make.conf or by your favourite text editor and replace the MAKEOPTS="-j8" or whatever number is in place of 8 than you should change it to the amount of CPU cores you have or want to give to compilations.
 
 # How do i create stage4's?
 
@@ -216,18 +215,18 @@ I first mount the root partition at /mnt/gentoo and you go into that directory a
 # FAQ (Frequent asked questions)
 
 Question 1. How many stage4's do you plan to add.
-Answer 1. Well i do simply don't know.
+Answer 1. Well i simply don't know.
 
 Question 2. What boot loader does it use by default?
 Answer 2. I preinstall the GRUB boot loader.
 
 Question 3. What kernel source does the stage4's use?
-Answer 3. The normal stage4's use the gentoo-sources kernel
+Answer 3. The normal stage4's use the gentoo-sources kernel.
 
 Question 4. Why do you use testing packages globally?
 Answer 4. I generally use testing packages globally to make troubleshooting easier and to help new users and to increase stability and not have people asking why some packages may be so old.
 
-Question 5. What display server do you include when needed for example for DE?
+Question 5. What display server do you include when needed for example DE?
 Answer 5. I generally include xorg-server and xorg-drivers although the DE may bring wayland as well but those are just the additional packages.
 
 Question 6. What did you do for firmware wise of the stage4's?
@@ -237,10 +236,10 @@ Question 7. What is the root password of your stage4's?
 Answer 7. By default it has no password.
 
 Question 8. How do you usually do your stage4's?
-Answer 8. I generally get the gentoo profile related to the DE/WM than i compile the kernel than i do the grub thing than i install XORG when it is needed by an DE or wayland if that uses that and than i install the DM by the DE most chosen DM than i install webkit-gtk and neofetch.
+Answer 8. I generally get the gentoo profile related to the DE/WM then i compile the kernel, afterwards i do the grub thing than i install XORG when it is needed by a DE or wayland if that uses that and then i install the DM by the DE most chosen DM then i install webkit-gtk and neofetch.
 
 Question 9. What is the hostname of your stage4's?
-Answer 9 . The Default hostname is gentoo .
+Answer 9 . The Default hostname is gentoo.
 
 Question 10. Why do you use MAKEOPTS="-j8" or other numbers in /etc/portage/make.conf by default?
 Answer 10. I use it to allow new users to easily set the core number of what they want to give to compilations and to not scare the new users of it spitting random Bad substitution errors at times.
@@ -249,4 +248,4 @@ Question 11. What file systems does it support by default?
 Answer 11. The packages: dosfstools,e2fsprogs and btrfs-progs are installed by default and any support by those are supported.
 
 Question 12. What tool does the stage4's use by default for networking?
-Answer 12. By default networkmanager
+Answer 12. By default, networkmanager.
