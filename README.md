@@ -226,7 +226,7 @@ Question 2. What boot loader does it use by default?
 Answer 2. I preinstall the GRUB boot loader.
 
 Question 3. What kernel source does the stage4's use?
-Answer 3. The normal stage4's use the gentoo-sources kernel.
+Answer 3. The default stage4's use the gentoo-sources kernel and the zen stage4's use the zen kernel and the liqourix stage4's use the liqourix kernel and the xanmod stage4's use the xanmod kernel,
 
 Question 4. Why do you use testing packages globally?
 Answer 4. I generally use testing packages globally to make troubleshooting easier and to help new users and to increase stability and not have people asking why some packages may be so old.
