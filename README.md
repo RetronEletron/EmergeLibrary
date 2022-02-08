@@ -254,3 +254,12 @@ Answer 11. The packages: dosfstools,e2fsprogs and btrfs-progs are installed by d
 
 Question 12. What tool does the stage4's use by default for networking?
 Answer 12. By default, networkmanager.
+
+Question 13. What is the default timezone.
+Answer 13. The default timezone is UTC set by:
+
+systemd:
+ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
+
+openrc:
+echo "Etc/UTC" > /etc/timezone && emerge --config sys-libs/timezone-data
