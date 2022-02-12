@@ -24,9 +24,9 @@ Firstly, make sure to mount your root partition to /mnt/gentoo (Can be the most 
 
 ## Downloading the stage4
 
-Firstly go to torrent.
+Firstly go to releases.
 Then select your stage4 of choice
-Then go the your bittorrent client and download it.
+Then download it.
 Then copy it to /mnt/gentoo 
 
 ## Unsquashing the stage4
