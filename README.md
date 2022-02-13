@@ -33,20 +33,10 @@ Then copy it to /mnt/gentoo
 
 Firstly, make sure you are in root.
 Then cd into /mnt/gentoo where your stage4 is supposed to be.
-Then run the "unsquashfs" command and after that put in the full file of the stage4 at /mnt/gentoo so your command should be similar to this command.
-"unsquashfs file.sfs" although file.sfs with your file name.
-And after that you can OPTIONALLY remove the stage4 although i would do that when i am sure the installation goes fine.
-After that we gotta move the extracted contents from the squashfs-root folder to /mnt/gentoo aka the where the root partition is mounted.
-And to do just run these commands below.
-
+tar -xJpf stage4-.tar.xz -C /mnt/gentoo or tar -xJpf stage4-.tar.xz if your already in the /mnt/gentoo directory with the stage4.
 NOTE: Make sure to be at /mnt/gentoo before you run those commands.
-```
-cd squashfs-root
-mv * /mnt/gentoo
-cd ..
-rm -rf squashfs-root
-```
-And that should be all for the Unsquashing bit of this guide.
+
+And that should be all for the Extracting bit of this guide.
 ## Fixing Network Issue with Stage4's
 
 This command below fixes the issue which causes internet to fail during chroot installation and possibly in the install itself.
@@ -215,7 +205,7 @@ Another thing you should do is edit /etc/portage/make.conf by nano /etc/portage/
 
 Run everything as root below:
 
-I first mount the root partition at /mnt/gentoo and you go into that directory and run mksquashfs /mnt/gentoo file.sfs -b 131072 -comp xz and to extract you run unsquashfs file.sfs where the file is located.
+cd to the /mnt/wherever and then do tar -cJpvf /path/to/output/tarball.tar.xz *
 
 # FAQ (Frequent asked questions)
 
