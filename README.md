@@ -1,5 +1,5 @@
 # EmergeLibrary
-An Library of gentoo stage4's proving a bootable system but modified with things like a DE.
+A library of gentoo stage4's proving a bootable system, but modified with things like a DE.
 
 ## To-Do list
 
@@ -8,13 +8,13 @@ You can check it [here](https://trello.com/b/nh4u8iIM).
 
 ## Author Introduction
 
-Hello If you do not know me I am Xinc (on discord) and i would like to provide bootable gentoo stage4's to allow people who do not want to bother compiling or want to experience gentoo without any bother a gentoo stage4 would be probably your best bet!
+Hello, if you do not know me, I am Xinc, (on discord) and I would like to provide bootable gentoo stage4's to allow people who do not want to bother compile or want to experience gentoo without any bother, a gentoo stage4 for your best experience!
 
 A stage4 can work by simply extracting it and doing a few modifications depending on your case.
 
 ## Contact
 
-I am generally active on discord so if you need something or just need to tell me something go send a friend request at Xinc#0116 and i will try to accept it as quick as possible, or join our server to get help from our staff right [here](https://discord.gg/dwFNxgZeVV).
+I am generally active on discord, so if you need something, or just need to tell me something, go send a friend request at Xinc#0116, and i will try to accept it as quick as possible, or join our server to get help from our staff right [here](https://discord.gg/dwFNxgZeVV).
 
 # Installation
 
@@ -24,16 +24,13 @@ Firstly, make sure to mount your root partition to /mnt/gentoo (Can be the most 
 
 ## Downloading the stage4
 
-Firstly go to releases.
-Then select your stage4 of choice
-Then download it.
-Then copy it to /mnt/gentoo 
+As for downloading, go to releases, then select your stage4 of choice, and then download it. Afterwards copy it to /mnt/gentoo 
 
 ## Unsquashing the stage4
 
-Firstly, make sure you are in root.
-Then cd into /mnt/gentoo where your stage4 is supposed to be.
-tar -xJpf stage4-.tar.xz -C /mnt/gentoo or tar -xJpf stage4-.tar.xz if your already in the /mnt/gentoo directory with the stage4.
+For unsquashing, make sure you are in root.
+Then cd into /mnt/gentoo where your stage4 is supposed to be,
+tar -xJpf stage4-.tar.xz -C /mnt/gentoo or tar -xJpf stage4-.tar.xz if youre already in the /mnt/gentoo directory with the stage4.
 NOTE: Make sure to be at /mnt/gentoo before you run those commands.
 
 And that should be all for the Extracting bit of this guide.
@@ -107,7 +104,7 @@ UUID=<uuid of efi> /boot/efi vfat umask=0077 0 2
 UUID=<uuid of root>    /    <root partition type>    noatime    0 1
 ```
   
-To edit fstab simply do nano /etc/fstab or edit /etc/fstab using your favourite text editor.
+To edit fstab, simply do nano /etc/fstab, or edit /etc/fstab using your favourite text editor.
   
 ## Installing and configuring grub
 ```
@@ -116,7 +113,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 ## Edit /etc/portage/make.conf (Optional)
   
-The /etc/portage/make.conf is not a required step but it may cause problems in some cases in for example different drivers then required which that alone can cause issues and so i recommend editing /etc/portage/make.conf by nano /etc/portage/make.conf or using your own faviourite text editor.
+The /etc/portage/make.conf is not a required step but it may cause problems in some cases. For example different drivers required which that alone can cause issues, and so i recommend editing /etc/portage/make.conf by nano /etc/portage/make.conf or using your own favourite text editor.
   
 Example of /etc/portage/make.conf:
 ```
@@ -159,7 +156,7 @@ Run the command below to change the root password.
 passwd
 ```
 ## Add Display Manager to be ran by default
-Run those commands below if you are not sure that the display manager is for sure added to be ran by default.
+Run the commands below if you are not sure, that the display manager is for sure added to be ran by default.
 ```
 OpenRC:
 rc-update add display-manager default
@@ -180,9 +177,9 @@ Or anything that is not your actual display manager of the stage4 then change it
 
 ## What do i do after i finish all those commands?
 
-That may be a question but i generally have some steps for people confused on what to do after the installation.
+That may be a question, but i generally have some steps for people confused on what to do after the installation.
 
-Firstly, I would recommend changing the root password simply type in passwd and then your password. If your password is too weak you can edit /etc/security/passwdqc.conf and whatever different is in there change it to this example:
+Firstly, I would recommend changing the root password, by simply typing in passwd and then your password. If your password is too weak you can edit /etc/security/passwdqc.conf and whatever different is in there change it to this example:
 ```
 min=1,1,1,1,1
 max=40
@@ -193,13 +190,13 @@ random=47
 enforce=everyone
 retry=3
 ```
-Another thing you may do is add the user and an easy guide is on https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Finalizing and after adding an user you can set a password for it by doing password username of course replace username with your actual user.
+Another thing you may want to do, is to add the user and an easy guide is on https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Finalizing. After adding a user you can set a password for it, by doing password username of course replace username with your actual user.
   
-Another thing you can do is edit your hostname and if you are on openRC you want to edit /etc/conf.d/hostname and if you are on systemd then you would want to edit /etc/hostname and change the hostname gentoo to whatever hostname you want than save and exit out.
+Another thing you may want to do, is edit your hostname. If you are on openRC you'd want to edit /etc/conf.d/hostname and if you are on systemd then you would want to edit /etc/hostname and change the hostname gentoo to whatever hostname you want then save and exit out.
 
-Another thing you could do optionally is install sudo/doas for your normal user to be able to use root only commands like emerge.
+Another thing you could do optionally, is install sudo/doas for your normal user to be able to use root only commands like emerge.
 
-Another thing you should do is edit /etc/portage/make.conf by nano /etc/portage/make.conf or by your favourite text editor and replace the MAKEOPTS="-j8" or whatever number is in place of 8 than you should change it to the amount of CPU cores you have or want to give to compilations.
+Another thing you should do, is edit /etc/portage/make.conf by nano /etc/portage/make.conf or by your favourite text editor and replace the MAKEOPTS="-j8" or whatever number is in place of 8 than you should change it to the amount of CPU cores you have or want to give to compilations.
 
 # How do i create stage4's?
 
