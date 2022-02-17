@@ -26,9 +26,9 @@ Firstly, make sure to mount your root partition to /mnt/gentoo (Can be the most 
 
 As for downloading, go to releases, then select your stage4 of choice, and then download it. Afterwards copy it to /mnt/gentoo 
 
-## Unsquashing the stage4
+## Extracting the stage4
 
-For unsquashing, make sure you are in root.
+For extracting, make sure you are in root.
 Then cd into /mnt/gentoo where your stage4 is supposed to be,
 tar -xJpf stage4-.tar.xz -C /mnt/gentoo or tar -xJpf stage4-.tar.xz if youre already in the /mnt/gentoo directory with the stage4.
 NOTE: Make sure to be at /mnt/gentoo before you run those commands.
