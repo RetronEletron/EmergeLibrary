@@ -17,7 +17,7 @@ A stage4 can work by simply extracting it and doing a few modifications dependin
 I am generally active on discord, so if you need something, or just need to tell me something, go send a friend request at Xinc#0116, and i will try to accept it as quick as possible, or join our server to get help from our staff right [here](https://discord.gg/dwFNxgZeVV).
 
 ## Release scheme
-Version 1 Stage4's = Tarver stage4's
+. Version 1 Stage4's = Tarver stage4's
 
 # Installation
 
